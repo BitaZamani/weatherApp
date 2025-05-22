@@ -25,7 +25,7 @@ function App() {
         setLoading(true);
         try {
           const res = await axios.get(
-            `http://api.weatherapi.com/v1/forecast.json?key=f29964a01dea4fd8be465927251204&q=${searchQuery}&days=7&aqi=yes&alerts=no`
+            `https://api.weatherapi.com/v1/forecast.json?key=f29964a01dea4fd8be465927251204&q=${searchQuery}&days=7&aqi=yes&alerts=no`
           );
           const bg = backgroundSet(res.data.current.condition.code);
           const time = parseInt(
