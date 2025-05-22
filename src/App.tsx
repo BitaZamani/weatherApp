@@ -9,7 +9,7 @@ import Info from "./components/Info";
 import backgroundSet from "./utils/backgroundSet";
 import Hourly from "./components/Hourly";
 import { Data } from "./types/dataType";
-
+import { preLoadImages } from "./utils/preLoadImages";
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [data, setData] = useState<Data | null>(null);
@@ -17,6 +17,9 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  useEffect(() => {
+    preLoadImages();
+  }, []);
   useEffect(() => {
     setError(false);
 
