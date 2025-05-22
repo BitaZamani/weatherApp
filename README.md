@@ -10,7 +10,7 @@ A modern and responsive weather forecast web app built with **React**, **TypeScr
 
 ## 🚀 Demo
 
-> Add a live demo link here if deployed (e.g., Vercel, Netlify)
+> [Weather App](https://weather-app-psi-murex-76.vercel.app/)
 
 
 ## 📦 Features
@@ -59,9 +59,11 @@ npm install
 3. **Set your WeatherAPI key:**
 
 In App.tsx, replace YOUR_API_KEY with your actual API key from weatherapi.com:
+```bash
 const res = await axios.get(
   `http://api.weatherapi.com/v1/forecast.json?key=YOUR_API_KEY&q=${searchQuery}&days=3&aqi=yes&alerts=no`
 );
+```
 
 ## 🙌 Acknowledgements
 
