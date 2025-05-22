@@ -56,7 +56,7 @@ export interface Hours {
       icon: string;
     };
   }
- export interface ForecastDays {
+export interface ForecastDays {
    
       date_epoch: string;
       date: string;
@@ -67,5 +67,7 @@ export interface Hours {
           icon: string;
         };
       };
-   
+  }
+export interface SearchInputProps {
+    setSearchQuery: (query: string) => void;
   }

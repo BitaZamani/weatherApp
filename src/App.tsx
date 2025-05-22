@@ -43,10 +43,13 @@ function App() {
               .split(" ")[0]
               .split(":")[0]
           );
-          if (time > sunsetTime || time < sunriseTime) setBackground(bg.night);
-          else setBackground(bg.day);
+          if (bg) {
+            if (time > sunsetTime || time < sunriseTime)
+              setBackground(bg.night);
+            else setBackground(bg.day);
+          }
           setData(res.data);
-        } catch (error: any) {
+        } catch (error: unknown) {
           setData(null);
           setBackground("/assets/bg_earth.jpg");
           setError(true);

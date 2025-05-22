@@ -1,6 +1,6 @@
 import { useState } from "react";
-
-const SearchInput = ({ setSearchQuery }) => {
+import { SearchInputProps } from "../types/dataType";
+const SearchInput = ({ setSearchQuery }: SearchInputProps) => {
   const [city, setCity] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {

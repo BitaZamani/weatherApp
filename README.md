@@ -50,12 +50,12 @@ A modern and responsive weather forecast web app built with **React**, **TypeScr
 ```bash
 git clone https://github.com/your-username/weather-app.git
 cd weather-app
-
+```
 2. **Install dependencies:**
 
 ```bash 
 npm install
-
+```
 3. **Set your WeatherAPI key:**
 
 In App.tsx, replace YOUR_API_KEY with your actual API key from weatherapi.com:
