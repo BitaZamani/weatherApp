@@ -67,11 +67,17 @@ function App() {
 
   return (
     <div
-      className={`min-h-screen h-full md:overflow-hidden bg-center bg-cover pb-2 bg-no-repeat px-2 md:px-10 `}
-      style={{
-        backgroundImage: `url(${background})`,
-      }}
+      className={`min-h-screen h-full md:overflow-hidden pb-2 px-2 md:px-10 relative`}
+      // style={{
+      //   backgroundImage: `url(${background})`,
+      // }}
     >
+      <img
+        src={background}
+        alt="background"
+        className="absolute inset-0 w-full h-full object-cover -z-10 transition-opacity duration-500"
+        style={{ opacity: background === "/assets/bg_earth.jpg" ? 1 : 1 }}
+      />
       <SearchInput setSearchQuery={setSearchQuery} />
       {loading ? (
         <Loader />

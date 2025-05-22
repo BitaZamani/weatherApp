@@ -19,8 +19,8 @@ const backgroundImages = [
     "/assets/snowthundernight.png",
   ];
   export const preLoadImages=()=>{
-    backgroundImages.forEach((img)=>{
+    backgroundImages.forEach((src)=>{
         const image = new Image()
-        image.src = img
+        image.src = src
     })
   }
