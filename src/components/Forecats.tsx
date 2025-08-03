@@ -16,7 +16,7 @@ const Forecast = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [bgLoaded, setBgLoaded] = useState(false); 
+  const [bgLoaded, setBgLoaded] = useState(false);
 
   useEffect(() => {
     setError(false);
@@ -67,7 +67,7 @@ const Forecast = () => {
   }, [searchQuery]);
 
   useEffect(() => {
-    setBgLoaded(false); 
+    setBgLoaded(false);
     const img = new Image();
     img.src = background;
     img.onload = () => setBgLoaded(true);
@@ -84,13 +84,13 @@ const Forecast = () => {
 
       <SearchInput setSearchQuery={setSearchQuery} />
 
-      {loading ? (
+      {loading && bgLoaded ? (
         <Loader />
       ) : error ? (
         <div className="flex justify-center items-center mt-44 text-gray-200">
           {errorMessage}
         </div>
-      ) : data !== null && bgLoaded ? (
+      ) : data !== null ? (
         <div className="grid md:grid-cols-12 md:grid-rows-3 text-gray-200 h-full gap-5 mt-1 transition-opacity duration-700 opacity-100">
           <div className="md:col-span-4 md:row-span-1">
             <Info data={data.location} />
