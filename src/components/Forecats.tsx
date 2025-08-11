@@ -51,6 +51,7 @@ const Forecast = () => {
             } else {
               setBackground(bg.day);
             }
+            setBgLoaded(true)
           }
 
           setData(res.data);
@@ -67,12 +68,7 @@ const Forecast = () => {
     getData();
   }, [searchQuery]);
 
-  useEffect(() => {
-    setBgLoaded(false);
-    const img = new Image();
-    img.src = background;
-    img.onload = () => setBgLoaded(true);
-  }, [background]);
+
 
   return (
     <div className="min-h-screen h-full md:overflow-hidden pb-2 px-2 md:px-10 relative">
