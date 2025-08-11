@@ -20,6 +20,7 @@ const Forecast = () => {
 
   useEffect(() => {
     setError(false);
+    setBgLoaded(false);
     const getData = async () => {
       if (searchQuery !== "") {
         setLoading(true);
